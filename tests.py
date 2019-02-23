@@ -33,7 +33,7 @@ class TestBase(LiveServerTestCase):
     def test_text_displayed_button(self):
         self.driver.find_element_by_id("button").click()
         self.assertEqual("Hello World!! Welcome!", self.driver.find_element_by_id("text").text)
-        print("\n New text displayed...OK\n")
+        print("\n New text displayed...OK \n")
 
 
 if __name__ == '__main__':
