@@ -31,7 +31,7 @@ class TestBase(LiveServerTestCase):
 # test to ensure that the new text is displayed when the button is clicked.
     def test_text_displayed_button(self):
         self.driver.find_element_by_id("button").click()
-        self.assertEqual("Hello World!! Welcome!", driver.find_element_by_id("text").text)
+        self.assertEqual("Hello World!! Welcome!", self.driver.find_element_by_id("text").text)
 
 
 if __name__ == '__main__':
