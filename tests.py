@@ -27,13 +27,13 @@ class TestBase(LiveServerTestCase):
     def test_server_is_up_and_running(self):
         response = urlopen(self.get_server_url())
         self.assertEqual(response.code, 200)
-        print("\n Test server up and running...OK")
+        print("\n Test server up and running...OK\n")
 
 # test to ensure that the new text is displayed when the button is clicked.
     def test_text_displayed_button(self):
         self.driver.find_element_by_id("button").click()
         self.assertEqual("Hello World!! Welcome!", self.driver.find_element_by_id("text").text)
-        print("\n New text displayed...OK")
+        print("\n New text displayed...OK\n")
 
 
 if __name__ == '__main__':
