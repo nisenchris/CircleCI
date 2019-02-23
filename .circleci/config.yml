@@ -32,9 +32,6 @@ jobs:
           command: |
             . venv/bin/activate
             nose2
-  deploy:
-    steps:
-      - checkout
       - run:
           name: Deploy Master to Heroku
           command: |
