@@ -35,7 +35,12 @@ jobs:
 orbs:
   heroku: circleci/heroku@0.0.5
 workflows:
+  build_and_test:
+    jobs:
+      - build
   heroku_deploy:
     jobs:
-      - heroku/deploy-via-git
+      - heroku/deploy-via-git:
+          requires:
+            - build
 
